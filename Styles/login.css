@@ -1,0 +1,47 @@
+.container-navbar{
+    border-bottom: groove;
+}
+
+.container-publish{
+    display: flex;
+    background-color: aqua;
+    padding: 50px 1px; 
+}
+
+.container-check{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.card-check{
+    padding: 10px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons{
+ background-color: burlywood;
+ padding: 10px 25px;
+ border-radius: 10px 2px;
+ border: ridge #111;
+}
+
+.container-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+}
+.hero-inputs{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
