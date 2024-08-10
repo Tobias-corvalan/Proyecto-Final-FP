@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+:root {
+  --back-color-one: #d9d9d9;
+  --color-one: #9d3aeb;
+}
+
+* {
+  font-family: "Playfair Display", serif;
+}
+#section-one {
+  display: flex;
+}
+#title-secundary {
+  margin: auto;
+  max-width: 20%;
+}
+span {
+  color: var(--color-one);
+}
+#container-opinions {
+  display: flex;
+  gap: 10px;
+  max-width: 70%;
+}
+#img-orgullo-prop {
+  max-width: 58px;
+  max-height: 87px;
+}
+.opinions {
+  background-color: var(--back-color-one);
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px 20px;
+}
+ul,
+li {
+  list-style-type: none;
+}
