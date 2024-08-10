@@ -9,6 +9,8 @@
 /* estilos generales */
 * {
   font-family: "Playfair Display", serif;
+  /* margin: 0; */
+  /* padding: 0; */
 }
 /* secciones */
 #section-one {
@@ -50,7 +52,7 @@ li {
   display: flex;
   max-width: 90%;
   max-height: 90%;
-  
+  justify-content: space-between;
 }
 .list {
 }
