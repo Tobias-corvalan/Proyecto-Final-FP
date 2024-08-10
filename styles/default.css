@@ -1,38 +1,61 @@
+/* importaciones */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* variables */
 :root {
   --back-color-one: #d9d9d9;
   --color-one: #9d3aeb;
 }
-
+/* estilos generales */
 * {
   font-family: "Playfair Display", serif;
 }
+/* secciones */
 #section-one {
   display: flex;
 }
+#section-two {
+  font-family: "Inter", sans-serif;
+}
+/* titulos */
 #title-secundary {
   margin: auto;
-  max-width: 20%;
+  max-width: 25%;
 }
 span {
   color: var(--color-one);
 }
-#container-opinions {
-  display: flex;
-  gap: 10px;
-  max-width: 70%;
-}
-#img-orgullo-prop {
-  max-width: 58px;
-  max-height: 87px;
-}
+/* opiniones de la gente */
 .opinions {
   background-color: var(--back-color-one);
   border-radius: 10px;
   margin: auto;
   padding: 10px 20px;
 }
-ul,
+#container-opinions {
+  display: flex;
+  gap: 10px;
+  max-width: 70%;
+}
+/* imagen */
+#img-orgullo-prop {
+  max-width: 58px;
+  max-height: 87px;
+}
+/* listas */
 li {
   list-style-type: none;
+}
+#list-main {
+  display: flex;
+  max-width: 90%;
+  max-height: 90%;
+  
+}
+.list {
+}
+/* articulos */
+article {
+  display: flex;
+  background-color: #e4b1fd;
 }
