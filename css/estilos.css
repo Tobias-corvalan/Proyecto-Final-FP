@@ -1,0 +1,78 @@
+<i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+/*  */
+
+position: absolute;
+width: 54px;
+height: 48px;
+left: 826px;
+top: 649px;
+
+font-family: 'Font Awesome 6 Free';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+
+color: rgba(5, 0, 255, 0.47);
+/*  */
+
+position: absolute;
+width: 82px;
+height: 54px;
+left: 407px;
+top: 649px;
+
+
+/*  */
+
+position: absolute;
+width: 54px;
+height: 48px;
+left: 1271px;
+top: 655px;
+
+font-family: 'Font Awesome 6 Free';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height */
+
+color: rgba(255, 212, 71, 0.62);
+
+/* Fondo_hero */
+
+position: absolute;
+width: 1825px;
+height: 519px;
+left: -147px;
+top: -10px;
+
+background: url(FedeC-LowRes7463.png);
+opacity: 0.9;
+filter: blur(2px);
+
+/* icono_emprendimiento */
+
+position: absolute;
+width: 139.58px;
+height: 80.68px;
+left: -8px;
+top: 2px;
+
+background: url(ORGULLO2);
+mix-blend-mode: darken;
+
+/* icono_emprendimiento */
+
+position: absolute;
+width: 127px;
+height: 73.7px;
+left: 89px;
+top: 5px;
+
+background: url(ORGULLO3);
+mix-blend-mode: darken;
+
+
