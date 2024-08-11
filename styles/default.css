@@ -7,7 +7,7 @@
   --back-color-two: #e4b1fd;
   --color-one: #9d3aeb;
   --font-one: "Playfair Display", serif;
-  --font-two: ;
+  --font-two: "Inter", sans-serif;
 }
 /* estilos generales */
 * {
@@ -18,11 +18,16 @@
 /* secciones */
 #section-one {
   display: flex;
+  justify-content: space-between;
 }
 #section-two {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-two);
 }
 /* titulos */
+#principal-text{
+  padding: 10px 10px;
+  margin: 40px;
+}
 #title-secundary {
   margin: auto;
   max-width: 25%;
@@ -34,8 +39,10 @@ span {
 .opinions {
   background-color: var(--back-color-one);
   border-radius: 10px;
-  margin: auto;
   padding: 10px 20px;
+  max-width: 800px;
+  max-height: 150px;
+  margin: 100px 20px 50px;
 }
 #container-opinions {
   display: flex;
