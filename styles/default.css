@@ -4,11 +4,14 @@
 /* variables */
 :root {
   --back-color-one: #d9d9d9;
+  --back-color-two: #e4b1fd;
   --color-one: #9d3aeb;
+  --font-one: "Playfair Display", serif;
+  --font-two: ;
 }
 /* estilos generales */
 * {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-playfair);
   /* margin: 0; */
   /* padding: 0; */
 }
@@ -50,14 +53,12 @@ li {
 }
 #list-main {
   display: flex;
-  max-width: 90%;
-  max-height: 90%;
   justify-content: space-between;
-}
-.list {
+  max-height: 90%;
+  max-width: 90%;
 }
 /* articulos */
 article {
+  background-color: var(--back-color-two);
   display: flex;
-  background-color: #e4b1fd;
 }
