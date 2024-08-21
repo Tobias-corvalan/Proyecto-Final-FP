@@ -25,7 +25,7 @@ h2 {
 h2 span {
   color: var(--color-one); /* Un color resaltado para "nuestra" */
 }
-
+/* testimonios */
 .testimonials {
   padding: 20px;
   background-color: #ffffff;
@@ -66,13 +66,17 @@ h2 span {
 
 .popular-zones {
   padding: 20px;
-  background-color: #ffffff;
   margin-bottom: 20px;
 }
-
+/* zonas */
 .zone-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.zone li span{
+  color: black;
+  font-weight: bold;
 }
 
 .zone h3 {
@@ -88,7 +92,7 @@ h2 span {
   color: #666;
   margin-bottom: 5px;
 }
-
+/* footer */
 footer {
   background-color: var(--back-color-two);
   color: var(--color-two);
