@@ -5,30 +5,40 @@
 :root {
   --back-color-one: #d9d9d9;
   --back-color-two: #e4b1fd;
+  --back-color-three: #fff;
   --color-one: #9d3aeb;
   --color-two: #111;
   --font-one: "Playfair Display", serif;
   --font-two: "Inter", sans-serif;
 }
+/* estilos generales y reinicio de valores */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: var(--back-color-three);
 }
-
+/* titulo */
 h2 {
   text-align: center;
-  color: #333;
+  color: var(--color-two);
 }
 
 h2 span {
   color: var(--color-one); /* Un color resaltado para "nuestra" */
 }
 /* testimonios */
+.introductory-paragraph {
+  margin-right: 9rem;
+  & h2 {
+    padding: 50px;
+  }
+}
 .testimonials {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: var(--back-color-three);
   margin-bottom: 20px;
 }
 
@@ -45,8 +55,8 @@ h2 span {
 
 .testimonial {
   background-color: #f0f0f0;
-  padding: 15px;
-  width: 30%;
+  width: 31%;
+  height: 80%;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -54,7 +64,6 @@ h2 span {
 
 .testimonial blockquote {
   font-style: italic;
-  color: #555;
 }
 
 .testimonial cite {
@@ -74,13 +83,13 @@ h2 span {
   justify-content: space-between;
 }
 
-.zone li span{
-  color: black;
+.zone li span {
+  color: var(--color-two);
   font-weight: bold;
 }
 
 .zone h3 {
-  color: #333;
+  color: var(--color-two);
 }
 
 .zone ul {
@@ -128,8 +137,8 @@ footer a {
   text-decoration: none;
 }
 
-footer span{
-  color: black;
+footer span {
+  color: var(--color-two);
   font-weight: bold;
 }
 
