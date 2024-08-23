@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/Normalize.css">
+    <link rel="stylesheet" href="./Styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
     
     <title>Login</title>
@@ -24,7 +25,7 @@
 
         <div class="navbar-login">
             <ul class="navbar-list">
-                <li style="background-color: #E7C4F3;"><a href="./publish.html">Publicar</a></li>
+                <li style="background-color: #E7C4F3;" ><a href="./publish.html" class="btn-publish">Publicar</a></li>
                 <li id="openModalBtn">Acceder</li>
             </ul>
         </div>
@@ -34,6 +35,10 @@
         <div class="card-container" id="login-card">
             <div class="overlay">
                 <div class="card">
+                    <div class="container-icon-login">
+                        <img src="./Imagenes/image.png" alt="icon-prop" class="img-1">
+                        <img src="./Imagenes/orgulloprop2.png" alt="" class="img-2">
+                    </div>
                     <h2>¡Hola!</h2>
                     <p>Ingresá a tu cuenta y accede a los avisos que contactaste, tus favoritos, las  búsquedas guardadas ¡y más!</p>
                     <form class="form-group">
@@ -41,8 +46,13 @@
                     <input type="password" id="password" placeholder="Ingrese su contraseña" required>
                     <button type="submit" class="login-btn">Iniciar Sesión</button>
                     </form>
-                    <button id="forgot-password">¿Olvidaste tu contraseña?</button>
+                    <p id="forgot-password">¿Olvidaste tu <span>contraseña?</span></p>
+                    <span class="container-separador"><span class="separador"></span>O ingresa con<span class="separador"></span></span>
+                        <div class="google">
+                            <img src="./Imagenes/google.png" alt="google">
+                        </div>
                     <span class="close-btn">&times;</span>
+
                 </div> 
                 <div class="card-forget">
                     <h2>¿Te olvidaste la contraseña?</h2>
@@ -50,7 +60,7 @@
                         <form class="form-group">
                         <label for="mail">email</label>
                         <input type="mail" id="mail" placeholder="Ingrese su correo" required>
-                        <button type="submit" class="login-btn">enviar</button>
+                        <button type="submit" class="login-btn">Continuar</button>
                         </form>
                         <span class="close-btn-2"><i class="fa-solid fa-arrow-left"></i></span>
                 </div>

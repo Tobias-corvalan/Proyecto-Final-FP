@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa con Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="stylemap.css">
+</head>
+<body>
+    <h1>Ingresar Dirección para Mostrar en el Mapa</h1>
+    <form id="location-form">
+        <label for="street">Calle:</label>
+        <input type="text" id="street" name="street" required><br><br>
+
+        <label for="number">Altura:</label>
+        <input type="text" id="number" name="number" required><br><br>
+
+        <label for="city">Localidad:</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="state">Provincia:</label>
+        <input type="text" id="state" name="state" required><br><br>
+
+        <label for="country">País:</label>
+        <input type="text" id="country" name="country" required><br><br>
+
+        <button type="submit">Mostrar en Mapa</button>
+    </form>
+
+    <h2>Mapa</h2>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
