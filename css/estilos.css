@@ -1,48 +1,42 @@
-<i class="fa-regular fa-star" style="color: #FFD43B;"></i>
-/*  */
+/* importaciones */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
-position: absolute;
-width: 54px;
-height: 48px;
-left: 826px;
-top: 649px;
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #d9d9d9
+}
 
-font-family: 'Font Awesome 6 Free';
-font-style: normal;
-font-weight: 900;
-font-size: 48px;
-line-height: 48px;
-/* identical to box height */
+.img {
+    max-width: 100%;
+}
 
-color: rgba(5, 0, 255, 0.47);
-/*  */
+.contanier{
+    max-width: 1200px;
+    margin: 0 auto;
 
-position: absolute;
-width: 82px;
-height: 54px;
-left: 407px;
-top: 649px;
+}
 
+/*Menu
 
-/*  */
-
-position: absolute;
-width: 54px;
-height: 48px;
-left: 1271px;
-top: 655px;
-
-font-family: 'Font Awesome 6 Free';
-font-style: normal;
-font-weight: 900;
-font-size: 48px;
-line-height: 48px;
-/* identical to box height */
-
-color: rgba(255, 212, 71, 0.62);
+/* Navbar */
+.navbar{
+    position: absolute;
+    width: 1688.41px;
+    height: 121px;
+    left: -24px;
+    top: -38px;
+}
 
 /* Fondo_hero */
-
+.fondo{
 position: absolute;
 width: 1825px;
 height: 519px;
@@ -50,243 +44,27 @@ left: -147px;
 top: -10px;
 
 background: url(FedeC-LowRes7463.png);
-opacity: 0.9;
+opacity: 0.7;
 filter: blur(2px);
+}
 
-/* icono_emprendimiento */
-
+/* Section_informacion */
+.section{
 position: absolute;
-width: 139.58px;
-height: 80.68px;
-left: -8px;
-top: 2px;
+width: 1310px;
+height: 541px;
+left: 171px;
+top: 530px;
+}
 
-background: url(ORGULLO2);
-mix-blend-mode: darken;
 
-/* icono_emprendimiento */
-
+/* Section_busqueda */
+.header-content prop{
 position: absolute;
-width: 127px;
-height: 73.7px;
-left: 89px;
-top: 5px;
-
-background: url(ORGULLO3);
-mix-blend-mode: darken;
-
-/* Desktop - 1 */
-
-position: absolute;
-width: 1679px;
-height: 1093px;
-left: -15px;
-top: 79px;
-
-background: #FDF9FF;
-mix-blend-mode: normal;
-border-radius: 10px;
-
-
-/* Navbar */
-
-position: absolute;
-width: 1688.41px;
-height: 121px;
-left: -24px;
-top: -38px;
-
-
-
-/* NAVBAR */
-
-position: absolute;
-width: 1688.33px;
-height: 120.21px;
-left: -23.91px;
-top: -38px;
-
-background: #FDF8FF;
-transform: matrix(1, 0, 0, 1, 0, 0);
-
-
-/* Rectan_acceder */
-
-position: absolute;
-width: 151.57px;
-height: 35.84px;
-left: 1346px;
-top: 21.3px;
-
-background: #E7C4F3;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/*  */
-
-position: absolute;
-width: 11.99px;
-height: 11.03px;
-left: 1593px;
-top: 32.57px;
-
-font-family: 'Font Awesome 6 Free';
-font-style: normal;
-font-weight: 900;
-font-size: 12px;
-line-height: 12px;
-/* identical to box height */
-
-color: #000000;
-
-
-
-/* ACCEDER */
-
-position: absolute;
-width: 75.24px;
-height: 14.7px;
-left: 1524px;
-top: 32.57px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-color: #000000;
-
-
-
-/* PUBLICAR */
-
-position: absolute;
-width: 73.06px;
-height: 13.78px;
-left: 1394px;
-top: 30.84px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-
-color: #000000;
-
-
-
-/*  */
-
-position: absolute;
-width: 7.88px;
-height: 19.74px;
-left: 363.1px;
-top: 43px;
-
-font-family: 'Font Awesome 6 Free';
-font-style: normal;
-font-weight: 900;
-font-size: 12px;
-line-height: 12px;
-
-color: #000000;
-
-transform: matrix(1, 0, 0, 1, 0, 0);
-
-
-/* icono_emprendimiento */
-
-position: absolute;
-width: 139.58px;
-height: 80.68px;
-left: -8px;
-top: 2px;
-
-background: url(ORGULLO2);
-mix-blend-mode: darken;
-
-
-/* icono_emprendimiento */
-
-position: absolute;
-width: 127px;
-height: 73.7px;
-left: 89px;
-top: 5px;
-
-background: url(ORGULLO3);
-mix-blend-mode: darken;
-
-
-/* Rectan_acceder */
-
-position: absolute;
-width: 151.57px;
-height: 35.84px;
-left: 235px;
-top: 29.16px;
-
-background: rgba(231, 196, 243, 0.61);
-mix-blend-mode: darken;
-opacity: 0.25;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/* Rectan_acceder */
-
-position: absolute;
-width: 151.57px;
-height: 35.84px;
-left: 418px;
-top: 30px;
-
-background: rgba(231, 196, 243, 0.61);
-mix-blend-mode: darken;
-opacity: 0.25;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-
-
-/*  */
-
-position: absolute;
-width: 7.88px;
-height: 19.74px;
-left: 547.1px;
-top: 43px;
-
-font-family: 'Font Awesome 6 Free';
-font-style: normal;
-font-weight: 900;
-font-size: 12px;
-line-height: 12px;
-
-color: #000000;
-
-transform: matrix(1, 0, 0, 1, 0, 0);
-
-
-/* Nosotros */
-
-position: absolute;
-width: 65px;
-height: 19px;
-left: 643px;
-top: 37px;
-
-font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-color: #000000;
-
-
+width: 961.19px;
+height: 350px;
+left: 397px;
+top: 190px;
+}
 
 
