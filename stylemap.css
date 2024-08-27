@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 400px;  /* Puedes ajustar el tamaño según tus necesidades */
+    width: 100%;
+    justify-content: space-between;
+}

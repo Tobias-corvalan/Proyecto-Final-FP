@@ -1,0 +1,99 @@
+
+
+
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 20px 1px;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:var(--white);
+    font-family: 'Rubik Distressed', cursive;
+}
+
+.container-form
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 30px;
+    gap: 50px;
+    animation: transparent 1s ease-in-out;
+    
+}
+.form-top
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.form-top h2
+{
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--green);
+}
+.form-top p
+{
+    font-family: "Montserrat", cursive;
+    font-weight: 800;
+    text-align: center;
+}
+.formulario
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formulario input
+{
+    padding: 25px 30px;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Bungee Spice', cursive;
+    background-color: var(--background);
+    outline: none;
+    border-color: orange;
+}
+.formulario p
+{
+    font-family: "Montserrat", cursive;
+    font-weight: 800;
+    text-align: center;
+}
+.formulario a
+{
+    color: red;
+}
+.formulario a:visited{
+    color: red;
+}
+#enviar
+{
+    padding: 15px 20px;
+    background-color: var(--button);
+    border: none;
+    cursor: pointer;
+}
+
+main span
+{
+    border: 5px solid red;
+    width: 100%;
+    position: relative;
+    bottom: 65px;
+}
+footer
+{
+    background: #000000;
+}
