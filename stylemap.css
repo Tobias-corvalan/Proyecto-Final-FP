@@ -8,6 +8,7 @@ form {
 }
 
 #map {
-    height: 400px;
+    height: 400px;  /* Puedes ajustar el tamaño según tus necesidades */
     width: 100%;
+    justify-content: space-between;
 }

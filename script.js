@@ -10,16 +10,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var currentMarker;
 
 // Manejar la geocodificación usando Nominatim (OpenStreetMap)
-document.getElementById('location-form').addEventListener('submit', function(e) {
+document.getElementById('location-form').addEventListener('change', function(e) {
     e.preventDefault();
 
     var street = document.getElementById('street').value;
     var number = document.getElementById('number').value;
     var city = document.getElementById('city').value;
     var state = document.getElementById('state').value;
-    var country = document.getElementById('country').value;
+    // var country = document.getElementById('country').value;
     
-    var address = `${street} ${number}, ${city}, ${state}, ${country}`;
+    var address = `${street} ${number}, ${city}, ${state}, argentina`;
     
     // Usar Nominatim para geocodificar la dirección
     var url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;

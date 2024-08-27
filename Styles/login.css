@@ -55,6 +55,22 @@ cursor: pointer;
     color: grey;
     position: relative;
 }
+.card-login{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    min-width: 500px;
+    height: 500px;
+    padding: 20px;
+    font-family: "Lato", sans-serif;
+    color: grey;
+    position: relative;
+}
 
 .show {
     display: flex;
@@ -142,3 +158,52 @@ cursor: pointer;
     border-radius: 50px;
     cursor: pointer;
 }
+
+.section-top-search{
+    background-image: url("../Imagenes/image.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    min-height: 400px; 
+}
+.search{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons-top{
+    display: flex;
+    justify-content: space-around;
+}
+.inputs-search{
+    display: flex;
+    box-shadow: 1px 1px 20px 1px;
+}
+#alquilar, #alquiler-temp{
+    padding: 10px 40px;
+    background-color: #E7C4F3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#Departamento, #Ambientes{
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+#search{
+    min-width: 500px;
+    border: none;
+    outline: none;
+}
+#submit{
+    padding: 10px 30px;
+    border: none;
+    background-color: #E7C4F3;
+}
+

@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
+    box-shadow: 1px 0.5px 8px 1px;
 }
 
 header img{

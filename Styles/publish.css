@@ -82,6 +82,11 @@
     width: 150px;
     border-radius: 10px;
 }
+.container-op-map{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .form-page{
     display: flex;
     flex-direction: column;
@@ -106,6 +111,7 @@
 .container-buttons{
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     gap: 20px;
     padding: 10px;
 }
@@ -116,10 +122,27 @@
 .inputs-prop-ubi{
     display: flex;
     flex-direction: column;
-    gap: 40px;    
-
+    gap: 20px;    
 }
 
+
+.inputs-prop-ubi-top{
+    display: flex;
+    gap: 20px;
+}
+.input-label{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.input-label input, .input-prop-ubi-prop input, .input-prop-ubi-prop-ciud input{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px black solid;
+}
+.inputs-prop-ubi input:focus{
+    outline: none;
+}
 #input-c-a{
     padding: 10px 20px;
     border-radius: 10px;
@@ -140,4 +163,9 @@
     display: flex;
     flex-direction: column;
     gap:10px;
+}
+
+#map {
+    height: 400px;  /* Puedes ajustar el tamaño según tus necesidades */
+    width: 100%;
 }

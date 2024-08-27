@@ -45,6 +45,7 @@ function showPage(page) {
         buttons[0].classList.add('check');
         showPage(currentPage);
         titulo_2.innerHTML = titulos[1];
+        invalidateSize()
         
     });
 
@@ -89,3 +90,63 @@ function showPage(page) {
 
 
 showPage(currentPage, titulo_2.innerHTML = titulos[0]); // Mostrar la primera página al cargar
+
+
+//MAPA 
+
+document.addEventListener('DOMContentLoaded', function () {
+    var map = L.map('map').setView([-34.6037, -58.3816], 13); // Vista inicial en Buenos Aires
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    var marker;
+
+    function updateMap() {
+        var street = document.getElementById('street').value;
+        var number = document.getElementById('number').value;
+        var state = document.getElementById('state').value;
+        var city = document.getElementById('city').value;
+
+        var direccion = `${street} ${number}, ${state}, ${city}`;
+
+        if (street && number && state && city) {
+            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(direccion)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        var lat = data[0].lat;
+                        var lon = data[0].lon;
+
+                        if (marker) {
+                            map.removeLayer(marker);
+                        }
+
+                        map.setView([lat, lon], 15);
+                        marker = L.marker([lat, lon]).addTo(map);
+                    }
+                });
+        }
+    }
+
+    document.getElementById('street').addEventListener('input', updateMap);
+    document.getElementById('number').addEventListener('input', updateMap);
+    document.getElementById('state').addEventListener('input', updateMap);
+    document.getElementById('city').addEventListener('input', updateMap);
+
+    // Forzar recalculación del tamaño del mapa al mostrar la página 2
+    document.getElementById('nextButton1').addEventListener('click', function() {
+        document.getElementById('page1').style.display = 'none';
+        document.getElementById('page2').style.display = 'flex';
+
+        setTimeout(function() {
+            map.invalidateSize();  // Asegura que el mapa se renderice correctamente al mostrarse
+        }, 100);  // Agrega un pequeño retraso para asegurarte de que el contenedor esté completamente renderizado
+    });
+
+    // También actualizar el mapa si la ventana se redimensiona
+    window.addEventListener('resize', function() {
+        map.invalidateSize();
+    });
+});

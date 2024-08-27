@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/Normalize.css">
     <link rel="stylesheet" href="./Styles/publish.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <title>Login</title>
 </head>
 <body>
     <header class="container-navbar">
         <div class="container-icon">
-            <a href="./index.html"><img src="./Imagenes/image.png" alt="icon-prop" ></a>
+            <a href="./index.html"><img src="./Imagenes/image-1.png" alt="icon-prop" ></a>
             <a href="./index.html"><img src="./Imagenes/orgulloprop2.png" alt=""></a>
         </div>
         <div class="navbar-login">
@@ -32,7 +33,7 @@
             <h1>Hola, Bienvenido. Empecemos a crear tu aviso</h1>
             <div class="hero-inputs">
                 <h2 class="hero-inputs-h2"></h2>
-                <form action="" class="form-op">
+                <form action="" class="form-op" id="location-form">
                     <div class="form-page" id="page1">
                         <div class="container-op">
                             <h3>Tipo de Operacion</h3>
@@ -58,25 +59,27 @@
                     </div>
                         <!-- Pagina 2 -->
                     <div class="form-page" id="page2"  style="display:none;">
-                        <div class="container-op">
+                        <div class="container-op-map">
                             <h3>Ingresa calle y altura</h3>
                             <div class="inputs-prop-ubi">
-                                <input type="text" name="" id="input-c-a" placeholder="Ingresa una direccion">
+                                <div class="inputs-prop-ubi-top">
+                                    <div class="input-label">
+                                        <label for="street">Calle</label>
+                                        <input type="text" id="street" name="street" required>
+                                    </div>
+                                    <div class="input-label">
+                                        <label for="number">Altura</label>
+                                        <input type="text" id="number" name="number" required><br><br>
+                                    </div>
+                                </div>
                                 <div class="inputs-prop-ubi-label">
                                     <div class="input-prop-ubi-prop">
-                                        <p>Provincia</p>
-                                        <select name="propiedad" id="option-prop-prov" required>
-                                            <option value="">Selecciona el tipo de propiedad</option>
-                                            <option value="Casa">Casa</option>
-                                            <option value="Duplex">Duplex</option>
-                                        </select>
+                                        <p>Localidad</p>
+                                        <input type="text" id="state" name="state" required><br><br>
                                     </div>
                                     <div class="input-prop-ubi-prop-ciud">
-                                        <p>Ciudad</p>
-                                        <select name="propiedad" id="option-prop-ciud" required>
-                                            <option value="">Selecciona el tipo de propiedad</option>
-                                            <option value="Casa">Casa</option>
-                                            <option value="Duplex">Duplex</option>
+                                        <p>Provincia</p>
+                                        <input type="text" id="city" name="city" required><br><br>
                                         </select>
                                     </div>
                                     
@@ -84,17 +87,19 @@
                             </div>
                         </div>  
                         <div class="container-tpro">
-                            <label for="propiedad-select"><h3>Tipo de Propiedad</h3></label>
-                            <select name="propiedad" id="option-prop" required>
-                                <option value="">Selecciona el tipo de propiedad</option>
-                                <option value="Casa">Casa</option>
-                                <option value="Duplex">Duplex</option>
-                            </select>
+                         <h3>Ubicacion</h3>
+                         <div id="map"></div>
+
                         </div>    
                         <div class="container-buttons">
-                            <button type="button" id="nextButton2">Siguiente</button>   
-                            <button type="button"><a href="./index.html">Salir</a></button>
-                            <button type="button" id="prevButton2">Anterior</button>
+                            <div class="button-rigth">
+                                <button type="button"><a href="./index.html">Salir</a></button>
+                                <button type="button" id="nextButton2">Siguiente</button>   
+                                
+                            </div>
+                            <div class="button-left">
+                                <button type="button" id="prevButton2">Anterior</button>
+                            </div>
                         </div>  
                     </div>
 
@@ -117,9 +122,14 @@
                             </select>
                         </div>    
                         <div class="container-buttons">
-                            <button type="button" id="nextButton3">Siguiente</button>   
-                            <button type="button"><a href="./index.html">Salir</a></button>
-                            <button type="button" id="prevButton3">Anterior</button>
+                            <div class="button-rigth"> 
+                                <button type="button"><a href="./index.html">Salir</a></button>
+                                <button type="button" id="nextButton3">Siguiente</button>   
+                               
+                            </div>
+                            <div class="button-left">
+                                <button type="button" id="prevButton3">Anterior</button>
+                            </div>
                         </div>  
                     </div>
 
@@ -142,9 +152,15 @@
                             </select>
                         </div>    
                         <div class="container-buttons">
-                            <button type="button"><a href="./index.html">Salir</a></button>
-                            <button type="button" id="prevButton4">Anterior</button>
-                            <button type="submit">Enviar</button>
+                            <div class="button-rigth">  
+                                <button type="button"><a href="./index.html">Salir</a></button>
+                                <button type="submit">Enviar</button>
+                              
+                            </div>
+                            <div class="button-left">
+                                <button type="button" id="prevButton4">Anterior</button>
+                            </div>
+                            
                         </div>  
                     </div>
                     
@@ -157,6 +173,6 @@
     </section>
     
 </body>
-
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="./js/publish.js"></script>
 </html>
