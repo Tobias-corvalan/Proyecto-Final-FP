@@ -31,10 +31,10 @@ body {
 }
 /* navbar */
 .nav .menu {
-  font-family: var(--font-two);
   background-color: var(--back-color-four);
   border-radius: 20px;
   border: 1px solid var(--color-two);
+  font-family: var(--font-two);
   list-style: none;
   margin: 1rem;
   width: 20rem;
@@ -58,14 +58,19 @@ button {
   background-color: var(--back-color-six);
   border-radius: 12px;
   border: 1px solid var(--color-two);
+  display: flex;
   font-family: var(--font-two);
-  padding: 0 2rem;
-  width: 62rem;
   margin: 1rem;
+  padding: 0 2rem;
+  width: 54rem;
+}
+
+.title-form {
+  font-size: 500px;
 }
 
 form input {
-    width: 14rem;
+  width: 14rem;
 }
 
 form div {

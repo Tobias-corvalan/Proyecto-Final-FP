@@ -33,64 +33,65 @@
 
       <main class="main-content">
         <section class="form-data">
-          <form action="" class="form">
-            <h3>Datos</h3>
-            <p>Completa o modifica tus datos personales</p>
-            <div>
-              <label for="name">Nombre</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div>
-              <label for="last-name">Apellido</label>
-              <input type="text" name="last-name" id="lastName" />
-            </div>
-            <div>
-              <label for="document">Documento</label>
-              <input type="number" name="document" id="document" />
-            </div>
-          </form>
+          <div>
+            <form action="" class="form">
+              <h3 class="font-size">Datos</h3>
+              <p>Completa o modifica tus datos personales</p>
+              <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div>
+                <label for="lastNname">Apellido</label>
+                <input type="text" name="lastNname" id="lastName" />
+              </div>
+              <div>
+                <label for="document">Documento</label>
+                <input type="number" name="document" id="document" />
+              </div>
+            </form>
 
-          <form action="" class="form">
-            <h3>Contacto</h3>
-            <p>Si publicaste un aviso, se contactaran por estos medios</p>
-            <div>
-              <label for="cel-wsp">Celular o Whatsapp</label>
-              <input
-                minlength="13"
-                maxlength="13"
-                type="number"
-                name="cel-wsp"
-                id="celWsp"
-              />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" />
-            </div>
-          </form>
-
+            <form action="" class="form">
+              <h3>Contacto</h3>
+              <p>Si publicaste un aviso, se contactaran por estos medios</p>
+              <div>
+                <label for="celWsp">Celular o Whatsapp</label>
+                <input
+                  minlength="13"
+                  maxlength="13"
+                  type="number"
+                  name="celWsp"
+                  id="celWsp"
+                />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+            </form>
+          </div>
           <form action="" class="form">
             <h3>Modifica tu contraseña</h3>
             <p>
               Ingresa una contraseña nueva. Debe tener entre 7 y 12 caracteres.
             </p>
             <div>
-              <label for="new-pass">Contraseña nueva</label>
+              <label for="newPass">Contraseña nueva</label>
               <input
                 minlength="7"
                 maxlength="12"
                 type="password"
-                name="new-pass"
+                name="newPass"
                 id="newPass"
               />
             </div>
             <div>
-              <label for="pass-confirm">Repetir contraseña</label>
-              <input type="password" name="pass-confirm" id="passConfirm" />
+              <label for="passConfirm">Repetir contraseña</label>
+              <input type="password" name="passConfirm" id="passConfirm" />
             </div>
           </form>
-          <button type="submit">Guardar cambios</button>
         </section>
+        <button type="submit">Guardar cambios</button>
       </main>
     </article>
   </body>
