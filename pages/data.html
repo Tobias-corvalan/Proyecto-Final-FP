@@ -1,78 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi cuenta</title>
+    <title>Datos</title>
+    <link rel="stylesheet" href="../styles/data.css" />
   </head>
   <body>
     <!-- menu lateral -->
-    <aside>
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Dato</a></li>
-          <li><a href="#">Cambiar contraseña</a></li>
-          <li><a href="#">Mis favoritos</a></li>
-          <li><a href="#">Eliminar cuenta</a></li>
-        </ul>
-      </nav>
-    </aside>
+    <article class="main-container">
+      <aside>
+        <nav class="nav">
+          <ul class="menu">
+            <li>
+              <button class="menu-item" onclick="showContent('data')">
+                Datos
+              </button>
+            </li>
+            <li>
+              <button class="menu-item" onclick="showContent('favorites')">
+                Mis favoritos
+              </button>
+            </li>
+            <li>
+              <button class="menu-item" onclick="showContent('delete')">
+                Eliminar cuenta
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-    <main class="main-content">
-      <header class="header">
-        <h2>Mis avisos</h2>
-      </header>
-      <section class="form-container">
-        <h3>Datos</h3>
-        <p>Completa tus datos</p>
-        <form action="" class="form">
-          <div>
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div>
-            <label for="last-name">Apellido</label>
-            <input type="text" name="last-name" id="lastName" />
-          </div>
-          <div>
-            <label for="document">Documento</label>
-            <input type="number" name="document" id="document" />
-          </div>
-        </form>
-        <h3>Cambiar contraseña</h3>
-        <p>Ingresa una contraseña nueva. Debe tener entre 7 y 12 caracteres.</p>
-        <form action="">
-          <label for="new-pass">Ingrese contraseña nueva</label>
-          <input
-            minlength="7"
-            maxlength="12"
-            type="password"
-            name="new-pass"
-            id="newPass"
-          />
-          <label for="pass-confirm">Confirmar contraseña</label>
-          <input type="password" name="pass-confirm" id="passConfirm" />
-        </form>
-        <h3>Contacto</h3>
-        <p>Si publicaste un aviso, se contactaran por estos medios</p>
-        <form action="">
-          <div>
-            <label for="cel-wsp">Celular o Whatsapp</label>
-            <input
-              minlength="13"
-              maxlength="13"
-              type="number"
-              name="cel-wsp"
-              id="celWsp"
-            />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-          </div>
+      <main class="main-content">
+        <section class="form-data">
+          <form action="" class="form">
+            <h3>Datos</h3>
+            <p>Completa o modifica tus datos personales</p>
+            <div>
+              <label for="name">Nombre</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div>
+              <label for="last-name">Apellido</label>
+              <input type="text" name="last-name" id="lastName" />
+            </div>
+            <div>
+              <label for="document">Documento</label>
+              <input type="number" name="document" id="document" />
+            </div>
+          </form>
+
+          <form action="" class="form">
+            <h3>Contacto</h3>
+            <p>Si publicaste un aviso, se contactaran por estos medios</p>
+            <div>
+              <label for="cel-wsp">Celular o Whatsapp</label>
+              <input
+                minlength="13"
+                maxlength="13"
+                type="number"
+                name="cel-wsp"
+                id="celWsp"
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+          </form>
+
+          <form action="" class="form">
+            <h3>Modifica tu contraseña</h3>
+            <p>
+              Ingresa una contraseña nueva. Debe tener entre 7 y 12 caracteres.
+            </p>
+            <div>
+              <label for="new-pass">Contraseña nueva</label>
+              <input
+                minlength="7"
+                maxlength="12"
+                type="password"
+                name="new-pass"
+                id="newPass"
+              />
+            </div>
+            <div>
+              <label for="pass-confirm">Repetir contraseña</label>
+              <input type="password" name="pass-confirm" id="passConfirm" />
+            </div>
+          </form>
           <button type="submit">Guardar cambios</button>
-        </form>
-      </section>
-    </main>
+        </section>
+      </main>
+    </article>
   </body>
 </html>
