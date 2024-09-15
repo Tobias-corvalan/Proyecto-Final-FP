@@ -3,15 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 /* variables */
 :root {
-  --back-color-five: #f2f0f0;
-  --back-color-four: #e7c4f386;
-  --back-color-one: #d9d9d9;
-  --back-color-six: #fafafa;
-  --back-color-three: #fff;
-  --back-color-two: #e4b1fd;
   --color-one: #9d3aeb;
   --color-two: #111;
   --color-three: #333;
+  --color-four: #666;
+  --color-five: #f2f0f0;
+  --color-six: #fafafa;
+  --color-seven: #e7c4f386;
+  --color-eight: #fff;
+  --color-nine: #e4b1fd;
+  --color-ten: #d9d9d9;
   --font-one: "Playfair Display", serif;
   --font-two: "Inter", sans-serif;
   --px-10: 10px;
@@ -24,6 +25,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+header div h4 select {
+  border: none;
+}
 
 .container {
   display: flex;
@@ -34,11 +42,13 @@ body {
 
 /* Estilos del sidebar (menú de la izquierda) */
 .sidebar {
-  background-color: #f0d4f4;
-  width: 250px;
+  margin: 1rem;
+  background-color: var(--color-seven);
+  width: 20rem;
   padding: var(--px-20);
   border-radius: var(--px-10);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 20rem;
 }
 
 .logo img {
@@ -55,29 +65,35 @@ body {
   margin: 15px 0;
 }
 
-.menu ul li a {
-  text-decoration: none;
-  color: #333;
+.menu ul li button,
+.save-button,
+.btnDelete {
+  background-color: var(--color-four);
+  border-radius: 15px;
+  border: none;
+  color: var(--color-three);
+  display: block;
   font-weight: bold;
   padding: var(--px-10);
-  display: block;
-  background-color: #f8f8f8;
-  border-radius: 5px;
   text-align: center;
-}
-
-.menu ul li a:hover {
-  background-color: #e0e0e0;
+  text-decoration: none;
+  &:hover {
+    background-color: #e0e0e0;
+  }
 }
 
 /* Estilos de la sección principal */
+.main-container {
+  display: flex;
+}
 .main-content {
-  background-color: var(--back-color-three);
+  background-color: var(--back-color-eight);
   flex-grow: 1;
   padding: var(--px-20);
   border-radius: var(--px-10);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-left: var(--px-20);
+  margin: 0 var(--px-20);
+  width: 80%;
 }
 
 .form-container {
@@ -122,7 +138,8 @@ h3 {
 }
 
 /* Botón de guardar cambios */
-.save-button {
+/* .save-button,
+.btnDelete {
   display: block;
   padding: 12px 25px;
   background-color: #f8c9c1;
@@ -133,8 +150,9 @@ h3 {
   cursor: pointer;
   margin: 20px 0 0;
   text-align: center;
-}
+} */
 
-.save-button:hover {
+/* .save-button:hover,
+.btnDelete:hover {
   background-color: #e5b0aa;
-}
+} */
