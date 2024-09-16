@@ -49,6 +49,7 @@ header div h4 select {
   border-radius: var(--px-10);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: 20rem;
+  justify-content: center;
 }
 
 .logo img {
@@ -68,9 +69,9 @@ header div h4 select {
 .menu ul li button,
 .save-button,
 .btnDelete {
-  background-color: var(--color-four);
+  width: 14rem;
   border-radius: 15px;
-  border: none;
+  border: 1px solid;
   color: var(--color-three);
   display: block;
   font-weight: bold;

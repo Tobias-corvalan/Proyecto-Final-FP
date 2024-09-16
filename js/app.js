@@ -49,7 +49,7 @@ const contentMap = {
             id="repeat-password"
             name="repeat-password"
           />
-          <button type="submit" class="save-button">Guardar cambios</button>
+          <button type="submit" class="mt-2 save-button">Guardar cambios</button>
         </form>
       </div>
       </div>
