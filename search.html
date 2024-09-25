@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrgulloProp - Búsqueda de Propiedades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Ingresa ciudad o barrio...">
+            <button class="filter-button">ALQUILAR ▼</button>
+            <div class="dropdown">
+                <button class="filter-button" id="departamentoBtn">DEPARTAME... ▼</button>
+                <div class="dropdown-content" id="departamentoDropdown">
+                    <a href="#">Departamento</a>
+                    <a href="#">Habitación</a>
+                    <a href="#">Casa</a>
+                    <a href="#">PH</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="filter-button" id="dormitoriosBtn">0-1 DORMI... ▼</button>
+                <div class="dropdown-content" id="dormitoriosDropdown">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4+</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="filter-button" id="precioBtn">PRECIO ▼</button>
+                <div class="dropdown-content" id="precioDropdown">
+                    <input type="number" id="precioDesde" placeholder="Desde">
+                    <input type="number" id="precioHasta" placeholder="Hasta">
+                    <button id="limpiarPrecio" class="precio-button">Limpiar</button>
+                    <button id="verResultadosPrecio" class="precio-button">Ver resultados</button>
+                </div>
+            </div>
+            <button class="filter-button">MÁS FILTROS</button>
+        </div>
+
+        <h1 id="resultsTitle"></h1>
+
+        <div class="property-list" id="propertyList">
+            
+        </div>
+
+        <div id="noResultsMessage" style="display: none;">
+            No se encontraron resultados para tu búsqueda.
+        </div>
+
+        <div class="pagination">
+            <button class="page-button">1</button>
+            <button class="page-button">2</button>
+            <button class="page-button">3</button>
+            <button class="page-button">▶</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
