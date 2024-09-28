@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrgulloProp - Búsqueda de Propiedades</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="./Styles/default.css">
+    <link rel="stylesheet" href="./Styles/Normalize.css">
 </head>
 <body>
+    <header class="container-navbar">
+        <div class="navbar">
+            <div class="container-icon">
+                <a href="./index.html"><img src="./Imagenes/image-1.png" alt="icon-prop" ></a>
+                <img src="./Imagenes/orgulloprop2.png" alt="">
+            </div>
+            <ul class="navbar-list">
+                <li>Ayuda <i class="fa-solid fa-chevron-down active-arrow"></i></li>
+                <li>Alquilar <i class="fa-solid fa-chevron-down active-arrow"></i></li>
+                <li>Nosotros <i class="fa-solid fa-chevron-down active-arrow"></i></li>
+            </ul>
+        </div>
+
+        <div class="navbar-login">
+            <ul class="navbar-list">
+                <li style="background-color: #E7C4F3;" ><a href="./publish.html" class="btn-publish">Publicar</a></li>
+                <li id="openModalBtn">Acceder</li>
+            </ul>
+        </div>
+    </header>
     <div class="container">
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Ingresa ciudad o barrio...">
@@ -58,7 +80,37 @@
             <button class="page-button">▶</button>
         </div>
     </div>
+    <footer>
+        <div class="footer-container">
+          <div class="contact-info">
+            <p>Contáctenos<br />Escríbenos a Tupropiedad@orgulloprop.com.ar</p>
+          </div>
+          <div class="social-media">
+            <p>Seguinos</p>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img src="./Imagenes/social/instagram.jpg" alt="Instagram"
+            /></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="./Imagenes/social/facebook.jpg" alt="Facebook"
+            /></a>
+            <a href="https://www.twitter.com/" target="_blank"
+              ><img src="./Imagenes/social/twitter.avif" alt="Twitter"
+            /></a>
+          </div>
+          <div class="footer-links">
+            <p>Todos los derechos reservados. © 2024 Orgulloprop</p>
+          </div>
+          <div class="">
+            <p>Telefonos utiles</p>
+            <p><span>103</span> - Emergencias <span>144</span> - Violencia de genero</p>
+            <p><span>108</span> - Linea social <span>911</span> - Policia</p>
+          </div>
+          <div class="location-info">
+            <p>Ubicación</p>
+            <img src="map.png" alt="Ubicación en el mapa" />
+        </div>
+      </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 </html>
