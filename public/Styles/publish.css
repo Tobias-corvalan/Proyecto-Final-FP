@@ -34,21 +34,24 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     box-shadow: 1px 1px 10px grey;
 }
 
 .buttons{
-    background-color: #D9D9D9;
-    box-shadow: 2px 5px 0 grey;
-    padding: 10px 25px;
-    border-radius: 10px;
-    transition: all 1s;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
 }
 
 .check{
-    box-shadow: 0 10px 0 green;
-    top: 3px;
+    background-color: #e1e2e3;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696;
 }
 
 .container-inputs{
@@ -135,12 +138,12 @@
     flex-direction: column;
     gap:20px
 }
-.input-label input, .input-prop-ubi-prop input, .input-prop-ubi-prop-ciud input{
+.input-label input, .input-prop-ubi-prop input, .input-prop-ubi-prop-ciud input , .input-m2{
     padding: 10px;
     border-radius: 20px;
     border: 1px black solid;
 }
-.inputs-prop-ubi input:focus{
+input:focus{
     outline: none;
 }
 #input-c-a{
@@ -168,4 +171,157 @@
 #map {
     height: 400px;  /* Puedes ajustar el tamaño según tus necesidades */
     width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.input-m2{
+    min-width:25% !important;
+    max-width: 250px;
+}
+.input-file{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #1475cf;
+    min-height: 300px;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.item-quantity{
+    width: 5%;
+}
+/* .inputs-btn{
+    gap: 10px;
+} */
+
+.container-buttons button{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+.container-buttons button:hover{
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+.container-buttons button:focus{
+
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+
+}
+.container-buttons button:active{
+
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+
+}
+
+.form-op a{
+    text-decoration: none;
+    color: grey;
+
+}
+
+/* drag and drop */
+
+
+
+
+
+
+.input-file {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-file.highlight {
+    background-color: #e0e0e0;
+    border-color: #333;
+}
+
+.input-file p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.input-file .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-file .button:hover {
+    background-color: #0056b3;
+}
+
+#fileElem {
+    display: none;
+}
+
+
+
+
+.gallery {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.img-container {
+    position: relative;
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background-color: rgba(255, 0, 0, 1);
 }

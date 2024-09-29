@@ -5,6 +5,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
+    text-decoration: none;
 }
 .container-navbar{
     display: flex; 

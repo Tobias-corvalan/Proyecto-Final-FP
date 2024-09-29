@@ -45,7 +45,6 @@ function showPage(page) {
         buttons[0].classList.add('check');
         showPage(currentPage);
         titulo_2.innerHTML = titulos[1];
-        invalidateSize()
         
     });
 
@@ -87,10 +86,6 @@ function showPage(page) {
         showPage(currentPage);
         titulo_2.innerHTML = titulos[2];
     });
-
-
-showPage(currentPage, titulo_2.innerHTML = titulos[0]); // Mostrar la primera página al cargar
-
 
 //MAPA 
 
@@ -149,4 +144,116 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', function() {
         map.invalidateSize();
     });
+});
+
+
+
+showPage(currentPage, titulo_2.innerHTML = titulos[0]); // Mostrar la primera página al cargar
+function updateQuantity(className, increment) {
+    var input = document.querySelector('.item-quantity.' + className);
+    var currentValue = parseInt(input.value);
+    var newValue = currentValue + increment;
+
+    if (newValue >= 0) { // Asegura que no baje de 0
+        input.value = newValue;
+    }
+}
+
+// drop and drag
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Definir las áreas y las galerías
+    const dropAreas = [
+        { dropArea: document.getElementById('drop-area1'), fileInput: document.getElementById('fileElem1'), gallery: document.getElementById('gallery1'), filesArray: [] },
+        { dropArea: document.getElementById('drop-area2'), fileInput: document.getElementById('fileElem2'), gallery: document.getElementById('gallery2'), filesArray: [] }
+    ];
+
+    dropAreas.forEach(({ dropArea, fileInput, gallery, filesArray }) => {
+        // Prevenir el comportamiento por defecto
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        // Añadir resaltado cuando el archivo está sobre la zona
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => highlight(dropArea), false);
+        });
+
+        // Remover el resaltado
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => unhighlight(dropArea), false);
+        });
+
+        // Cuando se sueltan los archivos
+        dropArea.addEventListener('drop', (e) => {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+
+            if (files.length + filesArray.length > 10) {
+                alert("No puedes subir más de 10 imágenes.");
+                return;
+            }
+
+            handleFiles(files, gallery, filesArray);
+        });
+
+        // Para archivos seleccionados manualmente
+        fileInput.addEventListener('change', (e) => {
+            let files = fileInput.files;
+
+            if (files.length + filesArray.length > 10) {
+                alert("No puedes subir más de 10 imágenes.");
+                return;
+            }
+
+            handleFiles(files, gallery, filesArray);
+        });
+    });
+
+    // Funciones para manejar los archivos
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function highlight(area) {
+        area.classList.add('highlight');
+    }
+
+    function unhighlight(area) {
+        area.classList.remove('highlight');
+    }
+
+    function handleFiles(files, gallery, filesArray) {
+        files = [...files];
+        files.forEach(file => {
+            filesArray.push(file);
+            previewFile(file, gallery);
+        });
+    }
+
+    function previewFile(file, gallery) {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = function() {
+            let imgContainer = document.createElement('div');
+            imgContainer.classList.add('img-container');
+
+            let img = document.createElement('img');
+            img.src = reader.result;
+
+            let removeBtn = document.createElement('button');
+            removeBtn.innerText = 'Eliminar';
+            removeBtn.classList.add('remove-btn');
+            removeBtn.addEventListener('click', () => {
+                imgContainer.remove();
+                filesArray = filesArray.filter(f => f !== file); // Elimina el archivo de la lista
+            });
+
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(removeBtn);
+            gallery.appendChild(imgContainer);
+        }
+    }
 });
