@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/Normalize.css">
+    <link rel="stylesheet" href="./Styles/login.css">
+    <link rel="stylesheet" href="./Styles/register.css">
+    <title>Registro</title>
+</head>
+<header>
+    <a href="./index.html"><div class="container-icon">
+        <img src="./Imagenes/image-1.png" alt="icon-prop" >
+        <img src="./Imagenes/orgulloprop2.png" alt="">
+    </div></a>
+    <!---
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="./index.html">Inicio</a></li>
+        </ul>
+    </nav>-->
+</header>
+<main>
+    <div class="container-form">
+        <div class="form-top">
+            <h2>Registrarse</h2>
+            <p>Se necesita una cuenta para poder terminar de realizar la compra</p>
+        </div>
+        <form action="/register" method="POST" class="formulario">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellido" placeholder="Apellido" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="pass" placeholder="Contraseña" required>
+            <input type="submit" value="Enviar" id="enviar">
+        </form>
+        <p>En caso de tener cuenta, <a href="./login.html">Iniciar Sesion</a></p>
+    </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<% if(typeof alert != "undefined") { %>
+    <script>
+        Swal.fire({
+            title:'<%= alertTitle %>',
+            text: '<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton: <%= showConfirmButton %>,
+            timer:<%= time%>
+        }).then(()=>{
+            window.location = '<%= ruta %>'
+        })
+
+    </script>
+    <% } %>
+}
+
+
+
+</body>
+</html>

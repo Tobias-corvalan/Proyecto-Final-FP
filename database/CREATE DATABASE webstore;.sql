@@ -8,5 +8,14 @@ USE webstore;
 --     provincia VARCHAR(50) NOT NULL,
 --     descripcion VARCHAR(250) NOT NULL,
 -- )
+CREATE TABLE usuario(
+    id INT IDENTITY(1, 1) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL, 
+    contraseña VARCHAR(255) NOT NULL,
+);
 
-INSERT INTO comment (id_usuario,nombre,localidad,provincia,descripcion) VALUES(1, 'Tobias','Quilmes','Buenos aires','Muy buena pagina me sirvio para encontrar por fin un alquiler digno');
+SELECT *FROM usuario;
+DROP TABLE usuario;
+DELETE FROM usuario;
