@@ -1,70 +1,66 @@
 /* importaciones */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-body{
-    font-family: "Poppins", sans-serif;
-    background-color: #d9d9d9
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #d9d9d9;
 }
 
 .img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-.contanier{
-    max-width: 1200px;
-    margin: 0 auto;
-
+.contanier {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*Menu
 
 /* Navbar */
-.navbar{
-    position: absolute;
-    width: 1688.41px;
-    height: 121px;
-    left: -24px;
-    top: -38px;
+.navbar {
+  position: absolute;
+  width: 1688.41px;
+  height: 121px;
+  left: -24px;
+  top: -38px;
 }
 
 /* Fondo_hero */
-.fondo{
-position: absolute;
-width: 1825px;
-height: 519px;
-left: -147px;
-top: -10px;
+.fondo {
+  position: absolute;
+  width: 1825px;
+  height: 519px;
+  left: -147px;
+  top: -10px;
 
-background: url(FedeC-LowRes7463.png);
-opacity: 0.7;
-filter: blur(2px);
+  background: url(FedeC-LowRes7463.png);
+  opacity: 0.7;
+  filter: blur(2px);
 }
 
 /* Section_informacion */
-.header-content hogar{
-position: absolute;
-width: 1310px;
-height: 541px;
-left: 171px;
-top: 530px;
+.header-content hogar {
+  position: absolute;
+  width: 1310px;
+  height: 541px;
+  left: 171px;
+  top: 530px;
 }
-
 
 /* Section_busqueda */
-.header-content prop{
-position: absolute;
-width: 961.19px;
-height: 350px;
-left: 397px;
-top: 190px;
+.header-content prop {
+  position: absolute;
+  width: 961.19px;
+  height: 350px;
+  left: 397px;
+  top: 190px;
 }
-
-
