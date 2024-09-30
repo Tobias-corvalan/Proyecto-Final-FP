@@ -14,11 +14,25 @@ export const getUser = async(req,res) =>{
     .input('email', sql.VarChar, req.body.email)
     .query('SELECT * FROM usuario WHERE email = @email',async(error,resul)=>{
         if(resul.rowsAffected[0] == 0 || !(await bcryptjs.compare(passw, resul.recordset[0].contraseña))){
-            res.send("email o contraseña incorrecto")
+            res.render('index.ejs',{
+                alert:true,
+                alertTitle: "ERROR",
+                alertMessage: "Usuario y/o contraseña incorrecta",
+                alertIcon:'error',
+                showConfirmButton: false,
+                time:1500,
+                ruta:'/'
+            })
         }else{
-          
-            res.send("login correcto")
-            console.log(resul.recordset[0].contraseña)
+            res.render('index.ejs',{
+                alert:true,
+                alertTitle: "registration",
+                alertMessage: "¡Successful register",
+                alertIcon:'success',
+                showConfirmButton: false,
+                time:1500,
+                ruta:'/'
+            })
         }
     })
 }

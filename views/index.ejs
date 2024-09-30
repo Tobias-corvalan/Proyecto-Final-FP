@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="../Styles/Normalize.css">
     <link rel="stylesheet" href="../Styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
-<<<<<<< HEAD:views/index.ejs
     <link rel="stylesheet" href="../Styles/default.css">
-=======
-    <link rel="stylesheet" href="./Styles/default.css">
-    <link rel="stylesheet" href="./styles/default.css">
->>>>>>> 2d70e55004500598f45ae2e0dbf1eaba306aff07:index.html
     <title>Login</title>
 </head>
 <body>
@@ -234,7 +229,23 @@
       </div>
     </footer>
     <script src="./js/scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer:<%= time%>
+            }).then(()=>{
+                window.location = '<%= ruta %>'
+            })
     
+        </script>
+        <% } %>
+    }
 </body>
 </html>
 
