@@ -1,13 +1,13 @@
 import {Router} from'express'
-import {createUser, getUser} from'../controllers/user.controllers.js'
+import {authLog, createUser, getUser} from'../controllers/user.controllers.js'
 
 const router = Router();
 //obtener usuario
 
 
-    router.get('/', function(req,res){
-        res.render('index.ejs')
-    })
+    // router.get('/', function(req,res){
+    //     res.render('index.ejs')
+    // })
     router.get('/publish', function(req,res){
         res.render('publish.ejs')
     })
@@ -15,10 +15,12 @@ const router = Router();
         res.render('register.ejs')
     })
 router.post('/register', createUser);
+
+
 router.post('/auth', getUser);
 
-
-router.get('/login',getUser);
+//auth pages
+router.get("/", authLog);
 
 
 // router.get('/comments/:id',getComment);

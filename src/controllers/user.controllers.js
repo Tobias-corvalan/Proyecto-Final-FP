@@ -9,7 +9,7 @@ export const getUser = async(req,res) =>{
     const passw = req.body.pass;
     console.log(req.body);
     let passhash = await bcryptjs.hash(passw,8);
-    if(req.body.email && passw)
+    if(req.body.email && passw){
     pool.request()
     .input('email', sql.VarChar, req.body.email)
     .query('SELECT * FROM usuario WHERE email = @email',async(error,resul)=>{
@@ -24,10 +24,13 @@ export const getUser = async(req,res) =>{
                 ruta:'/'
             })
         }else{
+            req.session.loggedin = true;
+            console.log(req.session);
+            req.session.name = resul.recordset[0].nombre[0];
             res.render('index.ejs',{
                 alert:true,
-                alertTitle: "registration",
-                alertMessage: "¡Successful register",
+                alertTitle: "Conexion exitosa",
+                alertMessage: "¡Login correcto!",
                 alertIcon:'success',
                 showConfirmButton: false,
                 time:1500,
@@ -35,6 +38,17 @@ export const getUser = async(req,res) =>{
             })
         }
     })
+    }else{
+        res.render('index.ejs',{
+            alert:true,
+            alertTitle: "Advertencia",
+            alertMessage: "¡Por favor ingrese un usuario y/o password!",
+            alertIcon:'warning',
+            showConfirmButton: true,
+            time:false,
+            ruta:'/'
+        })
+    }
 }
 
 // export const getComment = async(req,res) =>{
@@ -73,8 +87,23 @@ export const createUser = async(req,res) =>{
             })
         }
     })
+}
+     
+
+export const authLog = (req, res) =>{
+    if(req.session.loggedin){
+        res.render('index.ejs',{
+            login: req.session.loggedin,
+            name: req.session.name
+        });
+    }else{
+        console.log(req.session.loggedin);
+        res.render('index.ejs',{
+            login: req.session.loggedin,
+            name:'acceder'
+        });
     }
-        
+}
 
 
 
