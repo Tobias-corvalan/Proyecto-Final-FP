@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi cuenta</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="header-container">
+      <!-- logo -->
+      <div>
+        <a href="">
+          <img src="./assets/ORGULLO2.png" alt="orgullo prop imagen uno" />
+          <img src="./assets/ORGULLO3.png" alt="orgullo prop imagen dos" />
+        </a>
+      </div>
+      <div>
+        <h4>
+          <select name="" id="">
+            <option value=""><p>Roberto</p></option>
+            <option value=""><p>Mis avisos</p></option>
+            <option value=""><p>Mi cuenta</p></option>
+            <option value=""><p>Cerrar sesion</p></option>
+          </select>
+        </h4>
+      </div>
+    </header>
+    <main class="main-container">
+      <!-- Menú de la izquierda -->
+      <aside class="sidebar">
+        <nav class="menu">
+          <ul>
+            <li><button id="btnDataAccount">Datos</button></li>
+            <li><button id="btnFavoritesAccount">Mis favoritos</button></li>
+            <li><button id="btnDeleteAccount">Eliminar cuenta</button></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="main-content">
+        <!-- Sección principal que cambia de contenido -->
+        <div id="dynamicContent">
+          <div class="form-container">
+            <form class="left-section">
+              <h2>Datos</h2>
+              <p>Completa o modifica tus datos personales</p>
+              <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="roberto"/>
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="carlos" />
+
+                <label for="documento">Documento</label>
+                <input type="text" id="documento" name="documento" />
+
+                <h3>Contacto</h3>
+                <label for="telefono">Celular o Whatsapp</label>
+                <input type="text" id="telefono" name="telefono" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+              </form>
+            </form>
+
+            <!-- Sección de Modificar Contraseña -->
+            <div class="right-section">
+              <h2>Modifica tu contraseña</h2>
+              <p>
+                Ingresa una contraseña nueva. Debe tener entre 7 y 12 caracteres
+              </p>
+              <form>
+                <label for="new-password">Contraseña nueva</label>
+                <input
+                  minlength="7"
+                  maxlength="12"
+                  type="password"
+                  id="new-password"
+                  name="new-password"
+                />
+
+                <label for="repeat-password">Repetir contraseña</label>
+                <input
+                  minlength="7"
+                  maxlength="12"
+                  type="password"
+                  id="repeat-password"
+                  name="repeat-password"
+                />
+                <button type="submit" class="mt-2 save-button">
+                  Guardar cambios
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

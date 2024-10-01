@@ -8,10 +8,10 @@ const contentMap = {
         <p>Completa o modifica tus datos personales</p>
         <form>
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" />
+          <input type="text" id="nombre" name="nombre" placeholder="roberto" />
 
           <label for="apellido">Apellido</label>
-          <input type="text" id="apellido" name="apellido" />
+          <input type="text" id="apellido" name="apellido" placeholder="carlos" />
 
           <label for="documento">Documento</label>
           <input type="text" id="documento" name="documento" />
