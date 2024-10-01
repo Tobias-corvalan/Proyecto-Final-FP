@@ -90,20 +90,7 @@ export const createUser = async(req,res) =>{
 }
      
 
-export const authLog = (req, res) =>{
-    if(req.session.loggedin){
-        res.render('index.ejs',{
-            login: req.session.loggedin,
-            name: req.session.name
-        });
-    }else{
-        console.log(req.session.loggedin);
-        res.render('index.ejs',{
-            login: req.session.loggedin,
-            name:'acceder'
-        });
-    }
-}
+
 
 
 

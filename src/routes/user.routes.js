@@ -1,13 +1,13 @@
 import {Router} from'express'
-import {authLog, createUser, getUser} from'../controllers/user.controllers.js'
+import { createUser, getUser} from'../controllers/user.controllers.js'
 
 const router = Router();
 //obtener usuario
 
 
-    // router.get('/', function(req,res){
-    //     res.render('index.ejs')
-    // })
+     router.get('/', function(req,res){
+         res.render('index.ejs')
+     })
     router.get('/publish', function(req,res){
         res.render('publish.ejs')
     })
@@ -20,7 +20,7 @@ router.post('/register', createUser);
 router.post('/auth', getUser);
 
 //auth pages
-router.get("/", authLog);
+// router.get("/", authLog);
 
 
 // router.get('/comments/:id',getComment);
