@@ -6,7 +6,7 @@ import bcryptjs from 'bcryptjs'
 //
 export const getUser = async(req,res) =>{
     const pool = await getConnection();
-    const passw = req.body.pass;
+    const passw = req.body.contraseña;
     console.log(req.body);
     let passhash = await bcryptjs.hash(passw,8);
     if(req.body.email && passw){
@@ -83,7 +83,7 @@ export const createUser = async(req,res) =>{
                 alertIcon:'success',
                 showConfirmButton: false,
                 time:1500,
-                ruta:''
+                ruta:'/'
             })
         }
     })

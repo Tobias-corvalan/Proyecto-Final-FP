@@ -6,6 +6,11 @@
     padding: 0px;
     box-sizing: content-box;
     text-decoration: none;
+    list-style: none;
+}
+
+a{
+    color:black;
 }
 .container-navbar{
     display: flex; 
@@ -34,12 +39,16 @@ header img{
     font-family: 'lato', sans-serif;
 }
 
-.navbar-list li{
-    background-color:rgba(226, 209, 231, 0.616);
+.navbar-list li button{
     padding: 10px 20px;
     border-radius: 10px;
+    background-color: white;
+    border: none;
+    &:hover{
+        background-color: #f3e0fa;
+    }
 }
 #openModalBtn{
     cursor: pointer;
+    background-color: white;
 }
-
