@@ -10,18 +10,25 @@
   --color-two: #111;
   --font-one: "Playfair Display", serif;
   --font-two: "Inter", sans-serif;
+  --px-20: 20px;
+  --px-10: 10px;
 }
 /* estilos generales y reinicio de valores */
 body {
-  font-family: Arial, sans-serif;
+  background-color: var(--back-color-three);
+  font-family: var(--font-one);
+  font-weight: bold;
   margin: 0;
   padding: 0;
-  background-color: var(--back-color-three);
+  box-sizing: border-box;
 }
 /* titulo */
 h2 {
-  text-align: center;
   color: var(--color-two);
+  text-align: center;
+  font-size: 2rem;
+  margin-top: var(--px-20);
+  margin-bottom: var(--px-20);
 }
 
 h2 span {
@@ -29,58 +36,61 @@ h2 span {
 }
 /* testimonios */
 .introductory-paragraph {
-  margin-right: 9rem;
-  & h2 {
-    padding: 50px;
-  }
+  margin: var(--px-20);
 }
 .testimonials {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
   background-color: var(--back-color-three);
-  margin-bottom: 20px;
+  display: flex;
+  padding: 50px;
 }
 
 .testimonials p {
-  text-align: center;
   color: #666;
+  text-align: center;
 }
 
 .testimonial-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px 0;
+  font-family: var(--font-two);
+  gap: 1.2rem;
+  padding: 6.5 0 2rem;
 }
 
 .testimonial {
-  background-color: #c5b0b0;
-  width: 31%;
-  height: 80%;
+  background-color: #f0f0f0;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1; /*Esto es muy útil para distribuir elementos de manera equitativa dentro de un contenedor flexible.*/
+  margin: 10px;
+  max-width: 700px;
+  padding: 1rem;
   text-align: center;
-}
-
-.testimonial blockquote {
-  font-style: italic;
+  &  blockquote {
+    margin: 0 1rem;
+  } 
 }
 
 .testimonial cite {
   display: block;
-  margin-top: 10px;
   color: #888;
   font-size: 0.9em;
-}
-
-.popular-zones {
-  padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: left;
 }
 /* zonas */
+.popular-zones {
+  font-family: var(--font-two);
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+}
+
 .zone-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: var(--px-20);
 }
 
 .zone li span {
@@ -99,37 +109,45 @@ h2 span {
 
 .zone ul li {
   color: #666;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
-/* footer */
+/* Footer */
 footer {
   background-color: var(--back-color-two);
   color: var(--color-two);
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-container {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  font-family: var(--font-two);
+  justify-content: space-around;
+  padding: 1rem;
+  text-align: left;
 }
 
-.footer-container div {
+footer div {
+  flex: 1 1 200px;
   margin: 10px;
+}
+
+footer img {
+  max-width: 100px;
 }
 
 .contact-info,
 .social-media,
-.footer-links,
-.location-info,
-.map {
+.footer-All-rights-reserved {
   flex: 1 1 200px;
 }
 
 .social-media a img {
-  width: 30px;
-  margin: 0 10px;
+  transition: transform 0.3s ease; /*efecto de movimiento lento de iconos de redes sociales 
+  transition: transform 0.3s ease; hace que cualquier cambio en la propiedad transform del elemento (como una rotación, escalado o traslación) se realice de manera suave durante 0.3 segundos, con una aceleración inicial, un incremento en la velocidad, y luego una desaceleración hacia el final.*/
+  margin: 0 5px;
+  width: 40px;
+  &:hover {
+    transform: scale(
+      1.2
+    ); /*Este estilo se aplica cuando el usuario pasa el ratón sobre la imagen (hover), haciendo que la imagen aumente un 20% de tamaño. Esto le da un pequeño efecto "pop" visual para atraer la atención.*/
+  }
 }
 
 footer a {
@@ -146,8 +164,45 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.map img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 5px;
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+  /* testimonios */
+  .testimonials{
+    flex-wrap: wrap;
+  }
+  .introductory-paragraph {
+    margin: 2rem 1rem;
+  }
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+  /* zonas */
+  .zone-container {
+    flex-direction: column; /*zonas apiladas verticalmente*/
+  }
+  .zone {
+    flex-basis: 100%;
+  }
+  /* footer */
+  footer {
+    /* flex-direction: column; */
+    text-align: center;
+  }
+
+  footer div {
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial {
+    width: 100%;
+  }
 }

@@ -15,7 +15,6 @@ main
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     color:var(--white);
     font-family: 'Rubik Distressed', cursive;
 }
@@ -82,7 +81,7 @@ main
 #enviar
 {
     padding: 15px 20px;
-    background-color: var(--button);
+    background-color: gray;
     border: none;
     cursor: pointer;
 }
